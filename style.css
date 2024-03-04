@@ -151,7 +151,7 @@ nav li{
     background-color: black;
 }
 
-@media (max-width: 946px) {
+@media (max-width: 1200px) {
     .hamburger {
         display: block;
     }
@@ -174,7 +174,7 @@ nav li{
         gap: 0px;
         flex-direction: column;
         background-color: #262626;
-        width: 30%;
+        width: 40%;
         text-align: center;
         transition: 0.3s;
         overflow-y: auto; /* Ensure scrollbar appears when content overflows */
@@ -228,6 +228,24 @@ nav li{
         align-items: center;
         color: white;
         gap: 14px;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+
+    .footer-column{
+        margin: 8%;
+    }
+
+    .logo img{
+        width: 60vw;
+        height: 20vh;
+    }
+
+    .site-header{
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -442,7 +460,7 @@ nav li{
 }
 
 .footer-icons{
-    width: 5%;
+    width: 15px;
 }
 
 .footer-foot-1{
