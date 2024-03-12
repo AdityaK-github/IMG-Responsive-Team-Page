@@ -16,10 +16,17 @@ header{
 
 
 .site-header{
+    justify-content: space-between;
     max-height: 30px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+}
+
+.logo{
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
 }
 
 .logo img{
@@ -152,6 +159,10 @@ nav li{
 }
 
 @media (max-width: 1200px) {
+    .logo{
+        justify-content: space-around;
+    }
+
     .hamburger {
         display: block;
     }
@@ -208,20 +219,25 @@ nav li{
     }
 
     .site-header-right{
+        justify-content: center;
         width: 30vw;
     }
 }
-@media (max-width:768px) {
-    .header-links-mobile{
-        display: block;
 
-    }
-
-    .header-links{
+@media (max-width: 986px) {
+    .site-header-right {
         display: none;
     }
 
-    .header-links-mobile ul{
+    .header-links-mobile {
+        display: block;
+    }
+
+    .header-links {
+        display: none;
+    }
+
+    .header-links-mobile ul {
         margin: 10px 0;
         display: flex;
         flex-direction: column;
@@ -230,22 +246,74 @@ nav li{
         gap: 14px;
     }
 
-    footer{
-        flex-direction: column;
+    .footer {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 20px;
+        text-align: flex-start;
     }
 
-    .footer-column{
-        margin: 8%;
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4 {
+        width: auto !important;
     }
 
-    .logo img{
+    .col-4 img {
+        width: 100%;
+    }
+
+    .logo{
+        justify-content: center;
+    }
+
+    .logo img {
         width: 60vw;
         height: 20vh;
     }
 
-    .site-header{
+    .site-header {
         justify-content: center;
         align-items: center;
+    }
+
+    .profile {
+        width: 100vw;
+    }
+
+    .developers,
+    .developers-2,
+    .designers {
+        background: none !important;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    .developers-list,
+    .developers-2-list,
+    .designers-list {
+        justify-content: space-around;
+        flex-direction: column;
+        width: 100%;
+        gap: 60px
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        grid-template-columns: 300px;
+        grid-gap: 90px;
+        padding: 15px;
+        place-items: flex-start;
+    }
+
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4 {
+        width: auto !important;
     }
 }
 
@@ -273,7 +341,7 @@ nav li{
 
 .yellow_bar{
     background-color: #FFD53D;
-    width: 5vw;
+    width: 8vw;
     height: 3px;
     margin-top: 5px;
 }
@@ -282,31 +350,28 @@ nav li{
     margin-bottom: 5vh;
     position: relative;
     width: 100vw;
-    height: 75vh;
     color: #4C4C4C;
     padding: 0 8%;
-    background: linear-gradient(to bottom, white 0%, white 35%, #5183B8 35%, #5183B8 72%, white 72%, white 100%);
+    background: linear-gradient(to bottom, white 0%, white 35%, #5183B8 35%, #5183B8 74%, white 74%, white 100%);
 }
 
 .developers{
     margin: 10vh 0 1vh 0;
     position: relative;
     width: 100vw;
-    height: 80vh;
     color: #4C4C4C;
     padding: 0 8%;
     flex-wrap: wrap;
-    background: linear-gradient(to bottom, white 0%, white 40%, #5183B8 40%, #5183B8 68%, white 68%, white 100%);
+    background: linear-gradient(to bottom, white 0%, white 40%, #5183B8 40%, #5183B8 74%, white 74%, white 100%);
 }
 .developers-2{
     margin: 6vh 0 0 0;
     position: relative;
     width: 100vw;
-    height: 80vh;
     color: #4C4C4C;
     padding: 0 8%;
     flex-wrap: wrap;
-    background: linear-gradient(to bottom, white 0%, white 33%, #5183B8 33%, #5183B8 63%, white 63%, white 100%);
+    background: linear-gradient(to bottom, white 0%, white 40%, #5183B8 40%, #5183B8 72%, white 72%, white 100%);
 }
 
 .developers img{
@@ -377,7 +442,6 @@ nav li{
 #anshika{
     height: 43vh;
 }
-
 #samrat{
     height: 38vh;
 }
@@ -401,21 +465,6 @@ nav li{
     content: url('./images/noble_color.png');
 }
 
-.footer{
-    margin-top: 1%;
-    margin-bottom: 1%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.8rem;
-    margin-left: 8%;
-}
-
-.footer-left{
-    display: flex;
-    justify-content: space-between;
-    width: 55vw;
-}
-
 .fb img{
     margin-right: 8px;
     border-radius: 20px;
@@ -427,16 +476,38 @@ nav li{
     font-weight: 700;
 }
 
+.footer{
+    margin-top: 8%;
+    margin-bottom: 1%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.8rem;
+    margin-left: 8%;
+    padding-right: 8%;
+    width: 100vw;
+}
+
 .col-1{
-    width: 30%;
+    width: 17vw;
 }
 
 .col-2{
-    width: 15%;
+    width: 13vw;
 }
 
 .col-3{
-    width: 22%;
+    width: 13vw;
+}
+
+.col-4{
+    gap: 8px;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.col-4 img{
+    width: 15vw;
 }
 
 .col-content{
@@ -444,23 +515,6 @@ nav li{
     flex-direction: column;
     color: #232323;
     gap: 10px;
-}
-
-.footer-right{
-    width: 20vw;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-right: 10%;
-    gap: 10px;
-}
-
-.footer-right > img{
-    width: 15vw;
-}
-
-.footer-icons{
-    width: 15px;
 }
 
 .footer-foot-1{
